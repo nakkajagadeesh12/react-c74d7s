@@ -39,7 +39,6 @@ class Table extends React.Component {
           return <div>{img}</div>;
         }
       }
-
     ]
     return columns;
   }
@@ -50,6 +49,7 @@ class Table extends React.Component {
         <ReactTable
           data={this.getData()}
           columns={this.getColumns()}
+          filterable
         />
       </div>
     )
