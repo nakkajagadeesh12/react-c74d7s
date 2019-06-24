@@ -14,6 +14,12 @@ const storeReducer = (state = initialState, action) => {
         loading: true,
         error: false
       }
+    case 'GET_SECOND_TABLE':
+      return {
+        data: '',
+        loading: true,
+        error: false
+      }
     case 'GOT_TABLE_DATA':
       return {
         data: action.response,

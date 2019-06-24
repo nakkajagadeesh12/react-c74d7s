@@ -17,12 +17,20 @@ class MainComponent extends Component {
     this.setState({
       click: true,
     })
-    this.props.getData();
+    this.props.getTabData1();
   }
+  getData2() {
+    this.setState({
+      click: true,
+    })
+    this.props.getTabData2();
+  }
+
   render() {
     return (
       <div className="main-component">
-        <button type="button" onClick={this.getData1.bind(this)}>Click to check the Data</button>
+        <button type="button" onClick={this.getData1.bind(this)}>Click to check the Table1</button>
+        <button type="button" onClick={this.getData2.bind(this)}>Click to check the Table2</button>
         {
           this.state.click ?
             (this.props.loading ?
@@ -43,7 +51,8 @@ class MainComponent extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    getData: () => dispatch({ type: 'GET_TABLE_DATA' })
+    getTabData1: () => dispatch({ type: 'GET_TABLE_DATA' }),
+    getTabData2: () => dispatch({ type: 'GET_SECOND_TABLE' })
   }
 }
 const mapStateToProps = (state) => {

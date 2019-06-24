@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 
-
+//React Table
 class Table extends React.Component {
 
   getData() {
-    console.log("enter")
     const data = this.props.tabledata;
-    console.log("data", data)
     return data;
   }
   getColumns() {
@@ -29,16 +27,7 @@ class Table extends React.Component {
           return <div>{props.value}</div>
         }
       },
-      {
-        Header: "Image",
-        accessor: "thumbnailurl",
-        Cell: props => {
-          const img = <div>
-            <img src="https://www.w3schools.com/html/img_girl.jpg" />
-          </div>
-          return <div>{img}</div>;
-        }
-      }
+
     ]
     return columns;
   }
