@@ -14,20 +14,31 @@ class Table extends React.Component {
       {
         Header: "Id",
         accessor: "id",
-        className: "react-style",
         Cell: props => {
           return <div>{props.value}</div>
         }
       },
       {
-        Header: "Title",
-        accessor: "title",
-        className: "react-style",
+        Header: "Name",
+        accessor: "name",
         Cell: props => {
           return <div>{props.value}</div>
         }
       },
-
+      {
+        Header: "UserName",
+        accessor: "username",
+        Cell: props => {
+          return <div>{props.value}</div>
+        }
+      },
+      {
+        Header: "E-mail",
+        accessor: "email",
+        Cell: props => {
+          return <div>{props.value}</div>
+        }
+      },
     ]
     return columns;
   }

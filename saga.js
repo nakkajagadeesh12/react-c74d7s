@@ -13,12 +13,9 @@ function* getTable() {
 }
 
 function* getTab() {
-  console.log("enter1")
   try {
-    const response1 = yield call(() => fetch('https://jsonplaceholder.typicode.com/users').then(resp => resp.join()));
-    console.log("23")
-    yield put(gotTableData(response1))
-    console.log("enter2")
+    const response = yield call(() => fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()));
+    yield put(gotTableData(response))
   }
   catch (error) {
     yield put(tableError(error))
