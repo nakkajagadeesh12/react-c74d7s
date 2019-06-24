@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 import LoadingIndicator from './LoadingIndicator';
 import './style.css';
 import Table from './Table';
+import NewComponent from './NewComponent';
 
 let flag;
 class MainComponent extends Component {
@@ -34,6 +35,7 @@ class MainComponent extends Component {
       <div className="main-component">
         <button type="button" onClick={this.getData1.bind(this)}>Click to check the Table1</button>
         <button type="button" onClick={this.getData2.bind(this)}>Click to check the Table2</button>
+        {console.log(this.props.data, "data")}
         {
           this.state.click ?
             (this.props.loading ?
