@@ -6,9 +6,7 @@ import 'react-table/react-table.css';
 class Table extends React.Component {
 
   getData() {
-    console.log("enter")
-    const data = this.props.tabledata;
-    console.log("data", data)
+    const data = this.props.tabledata2;
     return data;
   }
   getColumns() {

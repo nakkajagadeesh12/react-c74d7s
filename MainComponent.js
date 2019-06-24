@@ -6,6 +6,7 @@ import LoadingIndicator from './LoadingIndicator';
 import './style.css';
 import Table from './Table';
 
+let flag;
 class MainComponent extends Component {
   constructor() {
     super();
@@ -18,12 +19,14 @@ class MainComponent extends Component {
       click: true,
     })
     this.props.getTabData1();
+    flag = true;
   }
   getData2() {
     this.setState({
       click: true,
     })
     this.props.getTabData2();
+    flag = false;
   }
 
   render() {
@@ -38,7 +41,12 @@ class MainComponent extends Component {
               this.props.error ?
                 <section>No response from api</section> :
                 <section>
-                  <Table tabledata={this.props.data} />
+                  {
+                    flag ?
+                      <Table tabledata1={this.props.data} />
+                      :
+                      <NewComponent tabledata2={this.props.data} />
+                  }
                 </section>)
             : null
         }

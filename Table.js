@@ -6,7 +6,7 @@ import 'react-table/react-table.css';
 class Table extends React.Component {
 
   getData() {
-    const data = this.props.tabledata;
+    const data = this.props.tabledata1;
     return data;
   }
   getColumns() {
@@ -49,7 +49,6 @@ class Table extends React.Component {
         <ReactTable
           data={this.getData()}
           columns={this.getColumns()}
-          filterable
         />
       </div>
     )
