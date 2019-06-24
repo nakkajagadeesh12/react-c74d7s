@@ -45,9 +45,9 @@ class MainComponent extends Component {
                 <section>
                   {
                     flag ?
-                      <Table tabledata1={this.props.data} />
-                      :
                       <NewComponent tabledata2={this.props.data} />
+                      :
+                      <Table tabledata1={this.props.data} />
                   }
                 </section>)
             : null

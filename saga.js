@@ -5,6 +5,7 @@ import { gotTableData, tableError } from './actions';
 function* getTable() {
   try {
     const response = yield call(() => fetch('https://jsonplaceholder.typicode.com/photos').then(res => res.json()));
+    console.log(response, "response1")
     yield put(gotTableData(response))
   }
   catch (error) {
@@ -15,6 +16,7 @@ function* getTable() {
 function* getTab() {
   try {
     const response = yield call(() => fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()));
+    console.log(response, "response2")
     yield put(gotTableData(response))
   }
   catch (error) {
