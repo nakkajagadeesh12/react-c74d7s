@@ -6,6 +6,8 @@ import LoadingIndicator from './LoadingIndicator';
 import './style.css';
 import Table from './Table';
 import NewComponent from './NewComponent';
+import Test from './PureComp';
+import Fun from './funComp';
 
 let flag;
 class MainComponent extends Component {
@@ -33,6 +35,8 @@ class MainComponent extends Component {
   render() {
     return (
       <div className="main-component">
+        <Fun loading={this.props.loading} />
+
         <button type="button" onClick={this.getData1.bind(this)}>Click to check the Table1</button>
         <button type="button" onClick={this.getData2.bind(this)}>Click to check the Table2</button>
         {console.log(this.props.data, "data")}
@@ -52,6 +56,7 @@ class MainComponent extends Component {
                 </section>)
             : null
         }
+        <Test />
       </div>
     );
   }
