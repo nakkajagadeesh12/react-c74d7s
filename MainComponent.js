@@ -11,8 +11,8 @@ import Fun from './funComp';
 
 let flag;
 class MainComponent extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       click: false
     };
