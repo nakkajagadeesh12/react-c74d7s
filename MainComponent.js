@@ -35,11 +35,8 @@ class MainComponent extends Component {
   render() {
     return (
       <div className="main-component">
-        <Fun loading={this.props.loading} />
-
         <button type="button" onClick={this.getData1.bind(this)}>Click to check the Table1</button>
         <button type="button" onClick={this.getData2.bind(this)}>Click to check the Table2</button>
-        {console.log(this.props.data, "data")}
         {
           this.state.click ?
             (this.props.loading ?
@@ -56,7 +53,6 @@ class MainComponent extends Component {
                 </section>)
             : null
         }
-        <Test />
       </div>
     );
   }
