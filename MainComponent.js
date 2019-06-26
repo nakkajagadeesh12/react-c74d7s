@@ -8,6 +8,7 @@ import Table from './Table';
 import NewComponent from './NewComponent';
 import Test from './PureComp';
 import Fun from './funComp';
+import checkBox from './CheckBox';
 
 let flag;
 class MainComponent extends Component {
@@ -37,6 +38,7 @@ class MainComponent extends Component {
       <div className="main-component">
         <button type="button" onClick={this.getData1.bind(this)}>Click to check the Table1</button>
         <button type="button" onClick={this.getData2.bind(this)}>Click to check the Table2</button>
+        <checkBox />
         {
           this.state.click ?
             (this.props.loading ?
