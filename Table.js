@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import './style.scss';
+import Todos from './Todo';
 
 //React Table
 class Table extends React.Component {
@@ -101,6 +102,7 @@ class Table extends React.Component {
             defaultPageSize={10}
           />
         </div>
+        <Todos />
       </div>
     )
   }

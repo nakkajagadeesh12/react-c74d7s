@@ -6,13 +6,14 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
       <div>
+      <h1>My Name is {this.props.name}</h1>
         <MainComponent />
       </div>
     );
@@ -21,6 +22,6 @@ class App extends Component {
 
 render(
   <Provider store={store}>
-    <App />
+    <App name="react"/>
   </Provider>
   , document.getElementById('root'));
