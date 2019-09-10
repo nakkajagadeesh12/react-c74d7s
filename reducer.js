@@ -10,26 +10,22 @@ const storeReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_TABLE_DATA':
       return {
-        data: '',
+        ...state,
         loading: true,
-        error: false
       }
     case 'GET_SECOND_TABLE':
       return {
-        data: '',
+        ...state,
         loading: true,
-        error: false
       }
     case 'GOT_TABLE_DATA':
       return {
+        ...state,
         data: action.response,
-        loading: false,
-        error: false
       }
     case 'ERR_TABLE':
       return {
-        data: '',
-        loading: false,
+        ...state,
         error: true
       }
     default:

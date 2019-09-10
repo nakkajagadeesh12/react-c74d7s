@@ -65,6 +65,7 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 const mapStateToProps = (state) => {
+  console.log(JSON.stringify(state), "ss")
   return {
     data: state.data,
     loading: state.loading,
