@@ -56,8 +56,6 @@ class MainComponent extends Component {
   }
 }
 
-// <LoadingIndicator />
-
 const mapDispatchToProps = (dispatch) => {
   return {
     getTabData1: () => dispatch({ type: 'GET_TABLE_DATA' }),
@@ -78,6 +76,6 @@ const mapStateToProps = (state) => {
 //   data: state.data,
 //   error: state.error
 // })
-const hoc = connect(mapStateToProps, mapDispatchToProps)(MainComponent);
-// export default connect(mapStateToProps, mapDispatchToProps)(MainComponent);
-export default hoc;
+// const hoc = connect(mapStateToProps, mapDispatchToProps)(MainComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(MainComponent);
+// export default hoc;
