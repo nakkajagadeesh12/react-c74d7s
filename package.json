@@ -1,8 +1,10 @@
 {
+  "homepage": "http://nakkajagadeesh12.github.io/react-c74d7s",
   "name": "react",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.1 ^15.5.0",
     "react": "16.8.0",
@@ -14,6 +16,8 @@
     "redux-saga": "^1.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
