@@ -1,7 +1,6 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
 import { gotTableData, tableError } from './actions';
 
-
 function* getTable() {
   try {
     const response = yield call(() => fetch('https://jsonplaceholder.typicode.com/photos').then(res => res.json()));
